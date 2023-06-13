@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta content="João Oliveira" name="author">
+    <link href="https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet">
+
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.css">
+
+    <!-- estilos próprios -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+    <title>Browser Dev Tools</title>
+</head>
+
+<body>
+
+<header class="container-fluid bg-dark">
+    <section class="row">
+        <h2 class="text-light text-center mx-auto my-5"><span class="font-weight-bolder">B</span>rowser <span
+                class="font-weight-bolder">D</span>ev <span class="font-weight-bolder">T</span>ools</h2>
+    </section>
+</header>
+
+<a id="top"></a>
+
+<nav class="navbar navbar-dark navbar-expand-sm bg-dark mt-3">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08"
+            aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#intro">What are Devtools?</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown08" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">Features</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown08">
+                    <a class="dropdown-item" href="#inspect">Inspect</a>
+                    <a class="dropdown-item" href="#emulator">Emulator</a>
+                    <a class="dropdown-item" href="#console">Console</a>
+                    <a class="dropdown-item" href="#network">Network</a>
+                    <a class="dropdown-item" href="#debugger">JS Debugger</a>
+                    <a class="dropdown-item" href="#audits">Audits</a>
+                    <a class="dropdown-item" href="#security">Security</a>
+                    <a class="dropdown-item" href="#storage">Storage</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#diffs">Differences across browsers</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section class="container sectitle col-12 col-sm-10 mt-3 bg-dark text-light" id="intro">
+    <article class="row">
+        <h4 class="mx-auto my-3"><span class="font-weight-bolder">W</span>hat are <span
+                class="font-weight-bolder">D</span>evtools?</h4>
+    </article>
+</section>
+
+<section class="container col-12 col-sm-10 bg-white text-dark border border-dark">
+    <article class="row">
+        <p class="my-3 mx-3 text-justify"><span class="text-primary font-weight-bold">Browser dev tools</span> (devtools
+            for short) are a set of features integrated into modern web browsers, designed to aid web developers during
+            the development process. While they are not building tools, they offer a number of crucial functions that
+            aid the creation of apps, mainly:</p>
+
+        <ul class="mx-3">
+            <li><span class="text-danger font-weight-bold">Analysis</span> of code and inner workings</li>
+            <li><span class="text-danger font-weight-bold">Diagnosis</span> of potential errors</li>
+            <li><span class="text-danger font-weight-bold">Testing</span> changes within the browser itself</li>
+        </ul>
+
+        <p class="my-3 mx-3 text-justify">Devtools are primarily used for working with <span
+                class="text-primary font-weight-bold">HTML</span> and
+            <span class="text-primary font-weight-bold">CSS</span>, but are also compatible with <span
+                    class="text-primary font-weight-bold">Javascript</span>, <span
+                    class="text-primary font-weight-bold">Python</span> and other similar languages.</p>
+
+        <p class="my-3 mx-3 text-justify font-italic text-muted">It’s worth noting that IDEs are being slowly phased out
+            for web development as browsers are progressively
+            capable of doing more. A developer could potentially use nothing but the devtools provided by the browser to
+            perform their duties. However, IDEs are still invaluable for learning the process of coding and possess
+            quality of life features that browsers have yet to implement.
+        </p>
+        <p class="my-3 mx-3 text-justify font-italic text-danger">What follows is a brief overview of each devtool’s
+            function. For more in-depth information about these devtools and their usage, please refer to the associated
+            documentation accessible from a browser of your choice. You can also find links in the footer below.
+        </p>
+    </article>
+    <p class="small text-primary text-right my-3 mx-3"><a href="#top">Back to top</a>
+</section>
+
+
+<div class="container-fluid mt-3 bg-dark text-light">
+    <article class="row">
+        <h4 class="mx-auto my-3"><span class="font-weight-bolder">F</span>eatures</h4>
+    </article>
+</div>
+
+
+<section class="container sectitle col-12 col-sm-10 mt-3 bg-dark text-light" id="inspect">
+    <article class="row">
+        <h4 class="mx-auto my-3"><span class="font-weight-bolder">I</span>nspect</h4>
+    </article>
+</section>
+<section class="container col-12 col-sm-10 bg-white text-dark border border-dark">
+    <article class="row">
+        <p class="my-auto mx-3 text-justify col-lg-6 longtext">The primary use of devtools is the ability to analyse a
+            page or app’s source
+            code. This is accomplished via the <span class="text-primary font-weight-bold">Inspect</span> feature easily
+            accessible via right-click menu. Inspecting allows
+            a developer to view any given page’s HTML structure. The highlight tool enables selection of specific HTML
+            elements, and the panel even allows for relocation of page elements via a drag-and-drop interface!
+        </p>
+        <figure class="text-center my-3 col-lg-5"><img src="images/inspect.png" class="img-fluid"></figure>
+        <p class="my-auto mx-3 text-justify col-lg-6 longtext">There is also a <span
+                class="text-primary font-weight-bold">CSS panel</span> which allows for the
+            editing/addition/removal of style elements, with the added benefit of changing the state of the elements for
+            the testing of pseudo-classes and other conditional styles. Lastly, the <span
+                    class="text-primary font-weight-bold">box model interface</span> beneath the
+            panel enables spacing and dimension modifications of individual elements.
+        </p>
+        <figure class="text-center my-3 col-lg-5"><img src="images/css.png" class="img-fluid"></figure>
+    </article>
+    <p class="small text-primary text-right my-3 mx-3"><a href="#top">Back to top</a>
+</section>
+
+
+<section class="container sectitle col-12 col-sm-10 mt-3 bg-dark text-light" id="emulator">
+    <article class="row">
+        <h4 class="mx-auto my-3"><span class="font-weight-bolder">E</span>mulator</h4>
+    </article>
+</section>
+<section class="container col-12 col-sm-10 bg-white text-dark border border-dark">
+    <article class="row">
+        <p class="my-auto mx-3 text-justify col-lg-6 longtext">Next we have the <span
+                class="text-primary font-weight-bold">emulator.</span> As the name indicates, this devtool emulates
+            several devices, allowing developers to preview their page on different screen sizes and ensure the
+            responsiveness of their work, primarily on mobile-friendly pages.
+        </p>
+        <figure class="text-center my-3 col-lg-5"><img src="images/emulator.png" class="img-fluid"></figure>
+        <p class="my-auto mx-3 text-justify col-lg-6 longtext">It also features a <span
+                class="text-primary font-weight-bold">throttler</span>, which simulates different
+            network conditions. This enables the testing of load speeds for content and other elements in a page. The
+            media queries feature shows how they modify the page CSS.
+        </p>
+        <figure class="text-center my-3 col-lg-5"><img src="images/throttler.png" class="img-fluid"></figure>
+    </article>
+    <p class="small text-primary text-right my-3 mx-3"><a href="#top">Back to top</a>
+</section>
+
+
+<section class="container sectitle col-12 col-sm-10 mt-3 bg-dark text-light" id="console">
+    <article class="row">
+        <h4 class="mx-auto my-3"><span class="font-weight-bolder">C</span>onsole</h4>
+    </article>
+</section>
+<section class="container col-12 col-sm-10 bg-white text-dark border border-dark">
+    <article class="row">
+        <p class="my-auto mx-3 text-justify col-lg-6 longtext">The <span
+                class="text-primary font-weight-bold">console</span> is the premiere diagnosis devtool, primarily
+            when it comes to JavaScript. It will display any error messages stemming from issues in the code, as well as
+            errors found when loading a page. The console is tied in with the <span
+                    class="text-primary font-weight-bold">network</span> and <span
+                    class="text-primary font-weight-bold">JavaScript Debugger</span> panels, as
+            most reasons for loading errors can be found there (and accessible through clicking links).
+        </p>
+        <figure class="text-center my-3 col-lg-5"><img src="images/console.png" class="img-fluid"></figure>
+    </article>
+    <p class="small text-primary text-right my-3 mx-3"><a href="#top">Back to top</a>
+</section>
+
+
+<section class="container sectitle col-12 col-sm-10 mt-3 bg-dark text-light" id="network">
+    <article class="row">
+        <h4 class="mx-auto my-3"><span class="font-weight-bolder">N</span>etwork</h4>
+    </article>
+</section>
+<section class="container col-12 col-sm-10 bg-white text-dark border border-dark">
+    <article class="row">
+        <p class="my-auto mx-3 text-justify col-lg-6 longtext">The <span
+                class="text-primary font-weight-bold">
+network</span> panel itself displays upload/download activity for page elements and allows for inspection of resource
+            properties, such as size and content. It shows all the connections the browser parses while a page is
+            loading, their speed and the order in which they are processed.
+        </p>
+        <figure class="text-center my-3 col-lg-5"><img src="images/network.png" class="img-fluid"></figure>
+        <p class="my-auto mx-3 text-justify col-lg-6 longtext">Each individual connection can be interacted with for
+            further information, such as response time and encoding.
+            You can save a log of your network activity via the <span
+                    class="text-primary font-weight-bold">
+preserve log</span> function, and <span
+                    class="text-primary font-weight-bold">
+disable the cache</span> to obtain more accurate load time simulations.
+        </p>
+        <figure class="text-center my-3 col-lg-5"><img src="images/connection.png" class="img-fluid"></figure>
+    </article>
+    <p class="small text-primary text-right my-3 mx-3"><a href="#top">Back to top</a>
+</section>
+
+
+<section class="container sectitle col-12 col-sm-10 mt-3 bg-dark text-light" id="debugger">
+    <article class="row">
+        <h4 class="mx-auto my-3"><span class="font-weight-bolder">J</span>ava<span class="font-weight-bolder">S</span>cript
+            <span class="font-weight-bolder">D</span>ebugger</h4>
+    </article>
+</section>
+<section class="container col-12 col-sm-10 bg-white text-dark border border-dark">
+    <article class="row">
+        <p class="my-auto mx-3 text-justify col-lg-6 longtext">With the <span
+                class="text-primary font-weight-bold">JavaScript debugger</span>, you have the option to view JS errors
+            on a line-by-line basis and even run additional code for the purposes of testing. It’s mainly accessed by
+            clicking error messages found in the <span
+                    class="text-primary font-weight-bold">console</span>. Additionally, it allows you to set <span
+                    class="font-weight-bolder text-danger">breakpoints</span>
+            to analyse programmed variables with greater detail. Breakpoints are markers that "freeze" a program in a
+            certain state while it’s being run, so specific behaviors can be checked without interfering with other
+            functions.
+        </p>
+        <figure class="text-center my-3 col-lg-5"><img src="images/debugger.png" class="img-fluid"></figure>
+    </article>
+    <p class="small text-primary text-right my-3 mx-3"><a href="#top">Back to top</a>
+</section>
+
+
+<section class="container sectitle col-12 col-sm-10 mt-3 bg-dark text-light" id="audits">
+    <article class="row">
+        <h4 class="mx-auto my-3"><span class="font-weight-bolder">A</span>udits</h4>
+    </article>
+</section>
+<section class="container col-12 col-sm-10 bg-white text-dark border border-dark">
+    <article class="row">
+        <p class="my-auto mx-3 text-justify col-lg-6 longtext">The <span
+                class="text-primary font-weight-bold">audits</span> tool provides a way to diagnose issues with your
+            page, whether those are performance or general experience related. The tool is powered by an external
+            service called <span
+                    class="text-primary font-weight-bold">Lighthouse</span>, which used to be exclusive to Google Chrome
+            but now functions with other browsers. It’s a general use tool, which points out issues not necessarily
+            visible from simple analysis of code. It could be considered a virtual second opinion/fresh pair of eyes.
+        </p>
+        <figure class="text-center my-3 col-lg-5"><img src="images/audits.png" class="img-fluid"></figure>
+    </article>
+    <p class="small text-primary text-right my-3 mx-3"><a href="#top">Back to top</a>
+</section>
+
+
+<section class="container sectitle col-12 col-sm-10 mt-3 bg-dark text-light" id="security">
+    <article class="row">
+        <h4 class="mx-auto my-3"><span class="font-weight-bolder">S</span>ecurity</h4>
+    </article>
+</section>
+<section class="container col-12 col-sm-10 bg-white text-dark border border-dark">
+    <article class="row">
+        <p class="my-auto mx-3 text-justify col-lg-6 longtext">The <span
+                class="text-primary font-weight-bold">security</span> panel displays information pertaining to the
+            security of a page’s connection. It can be used to display any certificates if present, and the connection
+            protocol.
+        </p>
+        <figure class="text-center my-3 col-lg-5"><img src="images/security.png" class="img-fluid"></figure>
+    </article>
+    <p class="small text-primary text-right my-3 mx-3"><a href="#top">Back to top</a>
+</section>
+
+
+<section class="container sectitle col-12 col-sm-10 mt-3 bg-dark text-light" id="storage">
+    <article class="row">
+        <h4 class="mx-auto my-3"><span class="font-weight-bolder">S</span>torage</h4>
+    </article>
+</section>
+<section class="container col-12 col-sm-10 bg-white text-dark border border-dark">
+    <article class="row">
+        <p class="my-auto mx-3 text-justify col-lg-6 longtext">The <span
+                class="text-primary font-weight-bold">storage</span> tab displays reports on several types of
+            application storage, namely: </p>
+
+        <figure class="text-center my-3 col-lg-5"><img src="images/storage.png" class="img-fluid"></figure>
+    </article>
+    <ul>
+        <li><span
+                class="text-primary font-weight-bold">Local storage</span> :: Data stored locally and preserved
+            between browser sessions.
+        </li>
+        <li><span
+                class="text-primary font-weight-bold">Session storage</span> :: Identical to local storage, but the
+            data is lost when the current session ends.
+        </li>
+        <li><span
+                class="text-primary font-weight-bold">Cache storage</span> :: Data which persists until specifically
+            deleted.
+        </li>
+        <li><span
+                class="text-primary font-weight-bold">Cookies</span> :: Cookies created by the current page or any
+            of its iframes. Network-generated cookies are also displayed, but only while the report is open.
+        </li>
+
+        <li><span
+                class="text-primary font-weight-bold">IndexedDB</span> :: Data generated by any IndexedDB present
+            within the page or its iframes. This is used for storing mass amounts of data, generally files that aren’t
+            stored externally.
+        </li>
+    </ul>
+    <p class="small text-primary text-right my-3 mx-3"><a href="#top">Back to top</a>
+</section>
+
+
+<section class="container text-centered col-12 col-sm-10 mt-3 bg-dark text-light" id="diffs">
+    <article class="row">
+        <h4 class="mx-auto my-3"><span class="font-weight-bolder">D</span>ifferences <span
+                class="font-weight-bolder">a</span>cross <span class="font-weight-bolder">b</span>rowsers</h4>
+    </article>
+</section>
+<section class="container col-12 col-sm-10 bg-white text-dark border border-dark">
+    <article class="row">
+        <p class="my-3 mx-3 text-justify">In the past, certain browsers, namely <span
+                class="text-primary font-weight-bold">
+Internet Explorer</span>, had proprietary HTML tags which made pages not render properly when viewed through other
+            browsers’ tools. As time went on, the paradigm shifted to a point where <span
+                    class="text-primary font-weight-bold">
+                it no longer matters</span> which browser is used.</p>
+
+        <p class="my-3 mx-3 text-justify">For example, <span
+                    class="text-primary font-weight-bold">
+Firefox</span> offers more artistic/design oriented tools, whereas <span
+                    class="text-primary font-weight-bold">
+Chrome</span> keeps an air of practicality. For Apple-oriented developers, <span
+                    class="text-primary font-weight-bold">
+            Safari</span> is the obvious choice.</p>
+
+        <p class="my-3 mx-3 text-justify">Beyond nomenclature for specific features and the clear differences in UI design, it’s completely up to
+            preference.
+        </p>
+
+    </article>
+
+    <p class="small text-primary text-right my-3 mx-3"><a href="#top">Back to top</a>
+</section>
+
+
+<footer class="container-fluid bg-dark mt-3">
+    <div class="row">
+        <section class="font-weight-bold col-6 col-sm-4 text-center text-light mx-auto mt-3 small"><a class="text-primary" href="https://en.wikipedia.org/wiki/Web_development_tools" target="_blank">Web development tools @ Wikipedia</a></section>
+        <section class="font-weight-bold col-6 col-sm-4 text-center text-light mx-auto mt-3 small"><a class="text-primary" href="https://flaviocopes.com/browser-dev-tools/" target="_blank">Browser dev tools overview @ Flavio Copes</a></section>
+        <section class="font-weight-bold col-6 col-sm-4 text-center text-light mx-auto mt-3 small"><a class="text-primary" href="https://www.lifewire.com/web-browser-developer-tools-3988965" target="_blank">How to use Browser Developer Tools @ Lifewire</a></section>
+        <section class="font-weight-bold col-6 col-sm-4 text-center text-light mx-auto mt-3 small"><a class="text-primary" href="https://www.hbdesign.com/comparison-browser-web-development-tools/" target="_blank">Comparison of Browser Devtools @ HB Design</a>
+        </section>
+        <section class="font-weight-bold col-6 col-sm-4 text-center text-light mx-auto mt-3 small"><a class="text-primary" href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools" target="_blank">Mozilla Devtools @ Mozilla</a></section>
+        <section class="font-weight-bold col-6 col-sm-4 text-center text-light mx-auto mt-3 small"><a class="text-primary" href="https://developers.google.com/web/tools/chrome-devtools" target="_blank">Chrome Devtools @ Google</a></section>
+        <section class="font-weight-bold col-12 text-center text-light mx-auto mt-3 small"><a class="text-primary" href="https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide" target="_blank">MS Edge Devtools @ Microsoft</a>
+        </section>
+    </div>
+        <div class="text-center text-light mx-auto mt-3">
+            <p class="font-weight-bold"><span class="fa fa-copyright 3x"></span> João Oliveira 2020</p>
+            <p class="font-weight-light"><a href="#top">Back to top</a></p>
+        </div>
+</footer>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.4.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
